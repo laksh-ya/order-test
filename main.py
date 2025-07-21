@@ -15,10 +15,7 @@ app = FastAPI()
 # Allow CORS for both local + production frontend
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        os.getenv("https://order-sage-seven.vercel.app", "http://localhost:3000"),  # fallback to localhost
-        "http://localhost:8000"
-    ],
+    allow_origins=[*],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
