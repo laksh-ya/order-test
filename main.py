@@ -16,7 +16,7 @@ app = FastAPI()
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
-        os.getenv("FRONTEND_URL", "http://localhost:3000"),  # fallback to localhost
+        os.getenv(FRONTEND_URL, "http://localhost:3000"),  # fallback to localhost
         "http://localhost:8000"
     ],
     allow_credentials=True,
